@@ -1,0 +1,6 @@
+<div *ngIf="note | async as noteData" class="add-note">
+    <input type="text" [(ngModel)]="noteData.title">
+    <textarea type="text" [(ngModel)]="noteData.content"></textarea>
+    <button (click)="updateNote(noteData)"> SAVE </button>
+    <button (click)="goBack()"> CANCEL </button>
+</div>
