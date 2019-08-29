@@ -1,0 +1,10 @@
+{
+  "name": "mean-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mayuri Rathod <mayuri.rathod@imaginea.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lerna": "^3.16.4"
+  }
+}
