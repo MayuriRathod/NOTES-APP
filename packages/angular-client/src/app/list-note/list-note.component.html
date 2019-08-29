@@ -1,0 +1,14 @@
+<button (click)="addNote()"> ADD NOTE </button>
+<div class="notes-list">
+    <ul *ngIf="notes | async as notesData; else noNotes">
+        <li *ngFor="let note of notesData"> 
+          <span> {{note.title}} </span>
+          <button (click)="editNote(note)"> EDIT </button>
+          <button (click)="deleteNote(note)"> DELETE </button>
+        </li>
+      </ul>
+    <ng-template #noNotes>
+      <span> No Notes Present </span>
+    </ng-template>
+</div>
+
