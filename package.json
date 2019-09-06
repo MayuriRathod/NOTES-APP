@@ -1,10 +1,20 @@
 {
   "name": "mean-demo",
   "version": "1.0.0",
+  "scripts": {
+    "prestart": "lerna run --scope={server} prestart --stream",
+    "start-angular": "lerna run --scope={server,angular-client} start --stream",
+    "start-react": "lerna run --scope={server,react-client} start --stream",
+    "build": "lerna run --scope={angular-client,react-client} --parallel build --stream"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "main": "index.js",
   "author": "Mayuri Rathod <mayuri.rathod@imaginea.com>",
   "license": "MIT",
   "dependencies": {
     "lerna": "^3.16.4"
-  }
+  } 
 }
